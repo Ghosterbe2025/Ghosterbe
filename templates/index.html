@@ -74,7 +74,7 @@
             font-size: 20px;
             margin-bottom: 40px;
         }
-        .hero a button {
+        .hero button {
             font-size: 18px;
             padding: 12px 28px;
             background-color: rgba(255, 255, 255, 0.1);
@@ -103,6 +103,49 @@
             font-size: 12px;
             color: #aaa;
         }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .modal-content {
+            background-color: #111;
+            margin: 15% auto;
+            padding: 30px;
+            border: 1px solid #444;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .modal-content h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .modal-content button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .confirm {
+            background-color: #0f0;
+            border: none;
+            color: #000;
+        }
+        .cancel {
+            background-color: #f00;
+            border: none;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -120,8 +163,9 @@
     <div class="hero">
         <h1>Willkommen bei Ghosterbe™</h1>
         <p>Dein digitales Erbe. Sicher. Vertrauensvoll. Verschlüsselt.</p>
-        <a href="/user-login"><button>Jetzt starten</button></a>
+        <button onclick="openModal()">Jetzt starten</button>
     </div>
+
     <footer>
         <div>
             <a href="/impressum.html">Impressum</a> |
@@ -132,5 +176,27 @@
             🔐 Ende-zu-Ende-verschlüsselte Verarbeitung
         </div>
     </footer>
+
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <h2>Bist du mindestens 18 Jahre alt?</h2>
+            <button class="confirm" onclick="proceedToLogin()">Ja</button>
+            <button class="cancel" onclick="closeModal()">Nein</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('ageModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('ageModal').style.display = 'none';
+        }
+
+        function proceedToLogin() {
+            window.location.href = '/user-login';
+        }
+    </script>
 </body>
 </html>
