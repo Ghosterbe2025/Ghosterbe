@@ -3,55 +3,83 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Ghosterbe Startseite</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Ghosterbe™</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Open Sans', sans-serif;
+            background: url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+            height: 100vh;
+            overflow: hidden;
         }
         header {
-            background-color: #0a0a0a;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px 40px;
+            z-index: 999;
+        }
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: white;
+            letter-spacing: 1px;
+        }
+        .menu-icon {
+            width: 28px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .menu-icon div {
+            height: 3px;
+            background-color: #00b7ff;
+            border-radius: 3px;
+        }
+        .hero {
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
+            height: 100vh;
             color: white;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .logo sup {
-            font-size: 12px;
-            vertical-align: top;
-            margin-left: 4px;
-        }
-        .content {
-            padding: 60px 20px;
             text-align: center;
+            padding: 0 20px;
         }
-        .content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 42px;
+            opacity: 0;
+            animation: fadeIn 2.5s ease forwards;
         }
-        .content p {
-            font-size: 20px;
-            color: #333;
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">Ghosterbe<sup>™</sup></div>
+        <div class="logo">Ghosterbe™</div>
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
-    <div class="content">
-        <h1>Willkommen bei Ghosterbe™</h1>
-        <p>Dein digitales Erbe. Sicher. Vertrauensvoll. Verschlüsselt.</p>
+    <div class="hero">
+        <h1>Willkommen bei Ghosterbe</h1>
     </div>
 </body>
 </html>
