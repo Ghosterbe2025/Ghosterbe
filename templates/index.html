@@ -108,7 +108,6 @@
             color: #aaa;
         }
 
-        /* Modal Styles (modernisiert) */
         .modal {
             display: none;
             position: fixed;
@@ -193,18 +192,15 @@
 
     <div id="ageModal" class="modal">
         <div class="modal-content">
-            <h2>Bist du mindestens 18 Jahre alt?</h2>
+            <h2>Diese Plattform richtet sich an Personen ab 18 Jahren.<br>Bitte bestätige dein Alter.</h2>
             <button class="confirm" onclick="proceedToLogin()">Ja</button>
-            <button class="cancel" onclick="closeModal()">Nein</button>
+            <button class="cancel" onclick="window.location.href='https://www.google.de'">Nein</button>
         </div>
     </div>
 
     <script>
         function openModal() {
             document.getElementById('ageModal').style.display = 'block';
-        }
-        function closeModal() {
-            document.getElementById('ageModal').style.display = 'none';
         }
         function proceedToLogin() {
             window.location.href = '/user-login';
