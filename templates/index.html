@@ -10,7 +10,7 @@
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
-            background: #0a0a0a url('/static/bluelight_final.jpg') no-repeat center center fixed;
+            background: #0a0a0a url('/static/bluelight.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
             color: white;
@@ -31,13 +31,14 @@
             align-items: center;
             font-family: 'DM Serif Display', serif;
             font-size: 24px;
+            color: white;
         }
         .logo img {
-            width: 32px;
-            height: 32px;
-            margin-right: 10px;
-            border-radius: 50%;
-            object-fit: cover;
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
         }
         .menu {
             display: flex;
@@ -84,7 +85,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/static/keyicon_final.png" alt="Key Icon">
+            <img src="/static/keyicon_white.png" alt="Key Icon">
             Ghosterbe
         </div>
         <div class="menu">
