@@ -10,10 +10,13 @@
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
-            background: #0a0a0a url('/static/bluelight_final.jpg') no-repeat center center fixed;
+            background: #0a0a0a url('/static/bluelight.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
             color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         header {
             display: flex;
@@ -37,7 +40,8 @@
             width: 28px;
             height: 28px;
             margin-right: 12px;
-            object-fit: contain;
+            border-radius: 50%;
+            object-fit: cover;
             filter: brightness(0) invert(1);
         }
         .menu {
@@ -57,7 +61,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            flex: 1;
             padding: 0 20px;
             text-align: center;
         }
@@ -80,6 +84,25 @@
             cursor: pointer;
             backdrop-filter: blur(3px);
         }
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 14px;
+        }
+        footer a {
+            color: #aaa;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-icons {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #aaa;
+        }
     </style>
 </head>
 <body>
@@ -99,5 +122,15 @@
         <p>Dein digitales Erbe. Sicher. Vertrauensvoll. Verschlüsselt.</p>
         <button>Get Started</button>
     </div>
+    <footer>
+        <div>
+            <a href="/impressum.html">Impressum</a> |
+            <a href="/datenschutz.html">Datenschutz</a>
+        </div>
+        <div class="footer-icons">
+            ❤️ 10 % unserer Einnahmen spenden wir an Kinderhospize<br>
+            🔐 Ende-zu-Ende-verschlüsselte Verarbeitung
+        </div>
+    </footer>
 </body>
 </html>
