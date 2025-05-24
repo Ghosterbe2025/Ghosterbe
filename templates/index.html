@@ -10,76 +10,94 @@
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
-            background: url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+            background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%);
+            background-image: url('https://images.unsplash.com/photo-1612831455546-7b978f3d2e94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             height: 100vh;
-            overflow: hidden;
+            color: white;
         }
         header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            backdrop-filter: blur(10px);
-            background-color: rgba(0, 0, 0, 0.4);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
-            z-index: 999;
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
         .logo {
+            display: flex;
+            align-items: center;
             font-family: 'DM Serif Display', serif;
-            font-size: 28px;
-            font-weight: 400;
-            color: white;
-            letter-spacing: 1px;
+            font-size: 24px;
         }
-        .menu-icon {
-            width: 28px;
-            height: 20px;
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: white;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .menu {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            cursor: pointer;
+            width: 22px;
+            height: 18px;
         }
-        .menu-icon div {
+        .menu div {
             height: 3px;
-            background-color: #00b7ff;
+            background-color: white;
             border-radius: 3px;
         }
         .hero {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             height: 100vh;
-            color: white;
-            text-align: center;
             padding: 0 20px;
+            text-align: center;
         }
         .hero h1 {
             font-family: 'DM Serif Display', serif;
-            font-size: 42px;
-            opacity: 0;
-            animation: fadeIn 2.5s ease forwards;
+            font-size: 40px;
+            margin-bottom: 20px;
         }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .hero button {
+            font-size: 18px;
+            padding: 12px 28px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            backdrop-filter: blur(3px);
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">Ghosterbe™</div>
-        <div class="menu-icon">
+        <div class="logo"><span class="logo-icon"></span>Ghosterbe</div>
+        <div class="menu">
             <div></div>
             <div></div>
             <div></div>
         </div>
     </header>
     <div class="hero">
-        <h1>Willkommen bei Ghosterbe</h1>
+        <h1>Willkommen bei Ghosterbe™</h1>
+        <p>Dein digitales Erbe. Sicher. Vertrauensvoll. Verschlüsselt.</p>
+        <button>Get Started</button>
     </div>
 </body>
 </html>
