@@ -219,7 +219,7 @@
     <div class="hero">
         <h1>Willkommen bei Ghosterbe™</h1>
         <p>Dein digitales Erbe. Sicher. Vertrauensvoll. Verschlüsselt.</p>
-        <button onclick="openModal()">Starten</button>
+        <button onclick="openModal()">Eintreten</button>
     </div>
 
     <div class="concept" id="conceptBox">
@@ -299,10 +299,10 @@ if (conceptBox) {
 
 
 <script>
-function openModal() {
+// entfernt {
     document.getElementById('ageModal').style.display = 'block';
 }
-function proceedToLogin() {
+// entfernt {
     window.location.href = '/user-login';
 }
 </script>
@@ -323,13 +323,30 @@ if (conceptBox) {
 </script>
 
 
+
 <div id="ageModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content" style="position: relative;">
+        <button onclick="closeModal()" style="position: absolute; top: 10px; right: 15px; font-size: 20px; background: none; border: none; color: white; cursor: pointer;">✕</button>
         <h2>Diese Plattform richtet sich an Personen ab 18 Jahren.<br>Bitte bestätige dein Alter.</h2>
         <button class="confirm" onclick="proceedToLogin()">Ja</button>
         <button class="cancel" onclick="window.location.href='https://www.google.de'">Nein</button>
     </div>
 </div>
+
+</div>
+
+
+<script>
+function openModal() {
+    document.getElementById("ageModal").style.display = "block";
+}
+function closeModal() {
+    document.getElementById("ageModal").style.display = "none";
+}
+function proceedToLogin() {
+    window.location.href = '/user-login';
+}
+</script>
 
 </body>
 </html>
