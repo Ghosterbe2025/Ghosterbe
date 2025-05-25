@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -120,6 +119,12 @@
             font-weight: 600;
             letter-spacing: 1px;
         }
+        .concept .footer-note {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #bbb;
+            font-weight: 500;
+        }
         footer {
             background-color: rgba(0, 0, 0, 0.6);
             text-align: center;
@@ -220,12 +225,19 @@
     <div class="concept" id="conceptBox">
         <h2>Was ist Ghosterbe™?</h2>
         <p>
-            Ghosterbe™ ist die weltweit erste digitale Nachlass-Plattform, die von Mensch und KI gemeinsam entwickelt wurde.
-            Sie ermöglicht es, persönliche Informationen, Nachrichten, Dokumente oder Zugänge sicher zu hinterlegen – 
-            und automatisch freizugeben, wenn du nicht mehr da bist.
-            <br><br>Vollständig verschlüsselt. Vertrauensvoll. Rechtskonform.
+            Ghosterbe™ ist die erste Plattform für digitale Nachlassvorsorge, die in enger Zusammenarbeit zwischen Mensch und Künstlicher Intelligenz entwickelt wurde – mit dem Ziel, digitale Vermögenswerte, persönliche Botschaften und vertrauliche Informationen auch über das eigene Leben hinaus sicher verfügbar zu machen.<br><br>
+            Im Zentrum steht ein Prinzip: <strong>Maximale Vertraulichkeit – selbst gegenüber uns.</strong><br>
+            Alle gespeicherten Inhalte werden bereits <strong>clientseitig verschlüsselt</strong>. Das bedeutet: Nur der Nutzer besitzt die Schlüssel – weder Ghosterbe™ noch Dritte haben zu irgendeinem Zeitpunkt Zugriff auf die gespeicherten Daten.<br><br>
+            Unser System erlaubt es registrierten Nutzern, sensible Informationen wie Zugangsdaten, Nachrichten, Dokumente oder individuelle Hinweise digital zu hinterlegen – und im Fall anhaltender Inaktivität oder Todes, nach definierten Regeln, automatisiert an ausgewählte Empfänger freizugeben.<br><br>
+            Dabei garantieren wir:<br>
+            – Ende-zu-Ende-Verschlüsselung<br>
+            – Transparente Protokolle<br>
+            – Einhaltung aller datenschutzrechtlichen Vorgaben nach DSGVO<br><br>
+            Ghosterbe™ ersetzt keine juristische Beratung oder notarielle Nachlassregelung, sondern ergänzt bestehende Vorsorgemaßnahmen um eine digitale Komponente – sicher, zukunftsgerichtet und vollständig kontrollierbar durch den Nutzer selbst.
         </p>
         <div class="slogan">Vertraulich • Innovativ • Made in Germany</div>
+        <div class="slogan">Zero-Knowledge-Technologie • DSGVO-konform • KI-gestützt entwickelt</div>
+        <div class="footer-note">Professionell entwickelt & gehostet in Deutschland 🇩🇪</div>
     </div>
 
     <footer>
@@ -255,7 +267,6 @@
             window.location.href = '/user-login';
         }
 
-        // Scroll-Fade-Effekt
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
