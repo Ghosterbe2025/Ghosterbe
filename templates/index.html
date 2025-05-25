@@ -326,7 +326,19 @@ if (conceptBox) {
 
 <div id="ageModal" class="modal">
     <div class="modal-content" style="position: relative;">
-        <button onclick="closeModal()" style="position: absolute; top: 10px; right: 15px; font-size: 20px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+        
+<button onclick="closeModal()" style="
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+">✕</button>
+
         <h2>Diese Plattform richtet sich an Personen ab 18 Jahren.<br>Bitte bestätige dein Alter.</h2>
         <button class="confirm" onclick="proceedToLogin()">Ja</button>
         <button class="cancel" onclick="window.location.href='https://www.google.de'">Nein</button>
