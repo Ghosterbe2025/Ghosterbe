@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
             font-family: 'Open Sans', sans-serif;
             background: #0a0a0a url('/static/bluelight.jpg') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
             color: white;
+            scroll-behavior: smooth;
         }
         header {
             display: flex;
@@ -85,13 +87,21 @@
             background-color: rgba(255, 255, 255, 0.25);
         }
         .concept {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 40px;
+            max-width: 960px;
+            margin: 60px auto;
+            padding: 60px 40px;
             background-color: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(6px);
             border-radius: 16px;
             text-align: center;
+            box-shadow: 0 0 50px rgba(0, 255, 204, 0.08);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease;
+        }
+        .concept.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         .concept h2 {
             font-size: 28px;
@@ -102,6 +112,13 @@
             font-size: 18px;
             line-height: 1.6;
             color: #ccc;
+        }
+        .concept .slogan {
+            margin-top: 25px;
+            font-size: 15px;
+            color: #00ffcc;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         footer {
             background-color: rgba(0, 0, 0, 0.6);
@@ -173,6 +190,12 @@
         .cancel:hover {
             background: #555;
         }
+        @media (max-width: 768px) {
+            .concept {
+                margin: 30px 15px;
+                padding: 40px 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -194,13 +217,15 @@
         <button onclick="openModal()">Starten</button>
     </div>
 
-    <div class="concept">
+    <div class="concept" id="conceptBox">
         <h2>Was ist Ghosterbe™?</h2>
         <p>
-            Ghosterbe™ ist die weltweit erste digitale Nachlass-Plattform, die von Mensch und KI gemeinsam entwickelt wurde. 
-            Sie ermöglicht es, persönliche Informationen, Nachrichten, Dokumente oder Zugänge sicher zu hinterlegen – und automatisch freizugeben, wenn du nicht mehr da bist.<br><br>
-            Vollständig verschlüsselt. Vertrauensvoll. Rechtskonform.
+            Ghosterbe™ ist die weltweit erste digitale Nachlass-Plattform, die von Mensch und KI gemeinsam entwickelt wurde.
+            Sie ermöglicht es, persönliche Informationen, Nachrichten, Dokumente oder Zugänge sicher zu hinterlegen – 
+            und automatisch freizugeben, wenn du nicht mehr da bist.
+            <br><br>Vollständig verschlüsselt. Vertrauensvoll. Rechtskonform.
         </p>
+        <div class="slogan">Vertraulich • Innovativ • Made in Germany</div>
     </div>
 
     <footer>
@@ -229,6 +254,17 @@
         function proceedToLogin() {
             window.location.href = '/user-login';
         }
+
+        // Scroll-Fade-Effekt
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.getElementById('conceptBox'));
     </script>
 </body>
 </html>
