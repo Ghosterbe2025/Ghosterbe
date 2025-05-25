@@ -281,5 +281,21 @@ function closeAgbModal() {
 </script>
 
         
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.5 });
+
+const conceptBox = document.getElementById('conceptBox');
+if (conceptBox) {
+    observer.observe(conceptBox);
+}
+</script>
+
 </body>
 </html>
