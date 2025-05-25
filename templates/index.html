@@ -242,41 +242,36 @@
 
     <footer>
     <div>
+        <a href="#" onclick="openAgbModal()">AGB</a> |
         <a href="/impressum.html">Impressum</a> |
-        <a href="/agb.html">AGB</a> |
         <a href="/datenschutz.html">Datenschutz</a>
     </div>
     <div class="footer-icons">
         ❤️ 10 % unserer Einnahmen spenden wir an Kinderhospize<br>
         🔐 Ende-zu-Ende-verschlüsselte Verarbeitung
     </div>
-    </footer>
+</footer>
 
-    <div id="ageModal" class="modal">
-        <div class="modal-content">
-            <h2>Diese Plattform richtet sich an Personen ab 18 Jahren.<br>Bitte bestätige dein Alter.</h2>
-            <button class="confirm" onclick="proceedToLogin()">Ja</button>
-            <button class="cancel" onclick="window.location.href='https://www.google.de'">Nein</button>
-        </div>
+<div id="agbModal" class="modal">
+    <div class="modal-content" style="max-height: 80vh; overflow-y: auto; position: relative;">
+        <button onclick="closeAgbModal()" style="position: absolute; top: 10px; right: 15px; font-size: 18px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+        <h2 style="margin-top: 0;">Allgemeine Geschäftsbedingungen (AGB)</h2>
+        <p><strong>Stand:</strong> Mai 2025</p>
+        <p><strong>1. Anbieterinformationen:</strong> Ghosterbe™ ist ein privat betriebenes Online-Angebot zur digitalen Vorsorge. Betreiber: [Name, Adresse, ggf. Handelsregister-Nr.].</p>
+        <p><strong>2. Leistungsbeschreibung:</strong> Ghosterbe™ ermöglicht es Nutzern, persönliche Informationen, Dateien und Nachrichten verschlüsselt zu hinterlegen. ... [KÜRZUNG HIER – ganzer AGB-Text wird in der Umsetzung eingefügt] ...</p>
+        <p><strong>10. Schlussbestimmungen:</strong> Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein, bleibt die Wirksamkeit der übrigen Regelungen unberührt. Änderungen oder Ergänzungen bedürfen der Schriftform. Ghosterbe™ behält sich vor, diese AGB jederzeit anzupassen. Nutzer werden über Änderungen rechtzeitig informiert.</p>
+        <p style="margin-top: 20px; color: #00ffcc;">Ghosterbe™ – Vertraulich. Verschlüsselt. Verantwortungsvoll.</p>
     </div>
+</div>
 
-    <script>
-        function openModal() {
-            document.getElementById('ageModal').style.display = 'block';
-        }
-        function proceedToLogin() {
-            window.location.href = '/user-login';
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(document.getElementById('conceptBox'));
-    </script>
+<script>
+function openAgbModal() {
+    document.getElementById("agbModal").style.display = "block";
+}
+function closeAgbModal() {
+    document.getElementById("agbModal").style.display = "none";
+}
+</script>
+        
 </body>
 </html>
