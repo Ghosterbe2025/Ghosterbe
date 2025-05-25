@@ -271,48 +271,16 @@
         <p style="margin-top: 20px; color: #00ffcc;">Ghosterbe™ – Vertraulich. Verschlüsselt. Verantwortungsvoll.</p>
     </div>
 </div>
-<script>
-function openAgbModal() {
-    document.getElementById("agbModal").style.display = "block";
-}
-function closeAgbModal() {
-    document.getElementById("agbModal").style.display = "none";
-}
-</script>
+
 
         
 
-<script>
-
-        }
-    });
-}, { threshold: 0.5 });
-
-if (conceptBox) {
-    observer.observe(conceptBox);
-}
-</script>
 
 
-<script>
- {
-    document.getElementById('ageModal').style.display = 'block';
-}
- {
-    window.location.href = '/user-login';
-}
-</script>
 
-<script>
 
-        }
-    });
-}, { threshold: 0.5 });
 
-if (conceptBox) {
-    observer.observe(conceptBox);
-}
-</script>
+
 
 
 
@@ -340,6 +308,12 @@ if (conceptBox) {
 </div>
 
 
+
+
+
+
+
+
 <script>
 function openModal() {
     document.getElementById("ageModal").style.display = "block";
@@ -349,6 +323,20 @@ function closeModal() {
 }
 function proceedToLogin() {
     window.location.href = '/user-login';
+}
+
+// Scroll-Konzept-Funktion (einmalig!)
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.5 });
+
+const conceptBox = document.getElementById('conceptBox');
+if (conceptBox) {
+    observer.observe(conceptBox);
 }
 </script>
 
