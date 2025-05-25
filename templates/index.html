@@ -303,8 +303,6 @@
         <button class="confirm" onclick="proceedToLogin()">Ja</button>
         <button class="cancel" onclick="window.location.href='https://www.google.de'">Nein</button>
     </div>
-</div>
-
 
 <script>
 function openModal() {
@@ -324,8 +322,8 @@ function closeAgbModal() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
