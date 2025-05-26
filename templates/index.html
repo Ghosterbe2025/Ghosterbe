@@ -240,7 +240,7 @@
 </div>
 <footer>
 <div>
-<a href="#" onclick="openAgbModal()">AGB</a> |
+<a href="#" onclick="openKontaktModal()">Kontakt</a> | <a href="#" onclick="openAgbModal()">AGB</a> |
         <a href="#" onclick="openImpressumModal()">Impressum</a> |
         <a href="#" onclick="openDatenschutzModal()">Datenschutz</a>
 </div>
@@ -355,6 +355,10 @@ function closeImpressumModal() {
 <p><strong>4. Datenweitergabe:</strong><br/>Nur bei gesetzlicher Pflicht, ausdrücklicher Einwilligung oder zur Vertragserfüllung. Auftragsverarbeiter gemäß Art. 28 DSGVO.</p>
 <p><strong>5. Datensicherheit:</strong><br/>SSL-Verschlüsselung, interne Zugriffsbeschränkung, Zero-Knowledge-Prinzip</p>
 <p><strong>6. Speicherdauer:</strong><br/>Nur so lange wie nötig oder gesetzlich erforderlich, danach Löschung oder Anonymisierung</p>
+
+<p><strong>Kontaktformular via Formspree:</strong><br/>
+Wenn Sie das Kontaktformular verwenden, wird Ihre Nachricht sicher über den Dienst Formspree (formspree.io) an uns übermittelt. Die Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage genutzt und nicht dauerhaft gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+
 <p><strong>7. Rechte:</strong><br/>Auskunft, Berichtigung, Löschung, Einschränkung, Übertragbarkeit, Widerruf, Widerspruch</p>
 <p><strong>8. Beschwerderecht:</strong><br/>Bei einer Datenschutzaufsichtsbehörde gemäß Art. 77 DSGVO</p>
 <p><strong>9. Änderungen:</strong><br/>Diese Erklärung kann angepasst werden. Die aktuelle Version finden Sie auf ghosterbe.de</p>
@@ -403,6 +407,28 @@ Dieses Impressum wurde individuell für Ghosterbe™ erstellt und unterliegt dem
 </p>
 </div>
 </div>
+</div>
+
+
+<div class="modal" id="kontaktModal">
+  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 600px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+    <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
+      <button onclick="document.getElementById('kontaktModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+    </div>
+    <div style="padding: 20px; text-align: left;">
+      <h2>Kontaktformular</h2>
+      <form action="https://formspree.io/f/mgvkjpzl" method="POST">
+        <label for="name">Ihr Name:</label><br/>
+        <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: white;" /><br/>
+        <label for="email">Ihre E-Mail:</label><br/>
+        <input type="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: white;" /><br/>
+        <label for="message">Ihre Nachricht:</label><br/>
+        <textarea name="message" rows="6" required style="width: 100%; padding: 8px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: white;"></textarea><br/>
+        <button type="submit" style="margin-top: 12px; background: #00ffcc; color: black; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">Nachricht senden</button>
+        <p style="font-size: 12px; color: #aaa; margin-top: 10px;"><em>Ihre Nachricht wird sicher über Formspree übermittelt. Es erfolgt keine dauerhafte Speicherung.</em></p>
+      </form>
+    </div>
+  </div>
 </div>
 
 </body>
