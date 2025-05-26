@@ -202,6 +202,21 @@
             }
         }
     </style>
+<style>
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95vw !important;
+        max-height: 80vh;
+        padding: 20px;
+    }
+    .modal-content .close-btn {
+        top: 8px !important;
+        right: 10px !important;
+        font-size: 22px;
+    }
+}
+</style>
+
 </head>
 <body>
     <header>
@@ -255,7 +270,7 @@
 
 <div id="agbModal" class="modal">
     <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 30px; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
-        <button onclick="closeAgbModal()" style="position: absolute; top: 10px; right: 15px; font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+        <button class="close-btn"  onclick="closeAgbModal()" style="position: absolute; top: 10px; right: 15px; font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
         <h2 style="margin-top: 0;">Allgemeine Geschäftsbedingungen (AGB)</h2>
         <p><strong>Stand:</strong> Mai 2025</p>
         <p><strong>1. Anbieterinformationen:</strong> Ghosterbe™ ist ein privat betriebenes Online-Angebot zur digitalen Vorsorge. Betreiber: [Name, Adresse, ggf. Handelsregister-Nr.].</p>
