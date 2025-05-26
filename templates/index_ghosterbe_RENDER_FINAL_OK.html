@@ -250,7 +250,7 @@
     </div>
 </footer>
 <div class="modal" id="agbModal">
-<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%%; max-width: 800px; margin: 5%% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
 <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
 <button onclick="closeAgbModal()" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
 </div>
@@ -287,6 +287,8 @@
 <h2>Diese Plattform richtet sich an Personen ab 18 Jahren.<br/>Bitte bestätige dein Alter.</h2>
 <button class="confirm" onclick="proceedToLogin()">Ja</button>
 <button class="cancel" onclick="window.location.href='https://www.google.de'">Nein</button>
+
+</div></div>
 <script>
 function openModal() {
     document.getElementById("ageModal").style.display = "block";
@@ -319,5 +321,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 </script>
-</div></div></body>
+</body>
 </html>
