@@ -264,7 +264,7 @@
 
 <div style="text-align: center; margin-top: 40px;">
   <p style="color: #aaa; font-size: 14px;">Zahlungsabwicklung sicher durch</p>
-  <img src="digistore24-logo.svg" alt="Digistore24" style="height: 40px; margin-top: 10px;">
+  <img src="https://www.digistore24.com/assets/images/digistore24-logo.svg" alt="Digistore24" style="height: 40px; margin-top: 10px;">
   <p style="font-size: 12px; color: #666; margin-top: 5px;">
     Alle Rechte an Markenzeichen liegen bei der Digistore24 GmbH – Verwendung zur Anbieterkennzeichnung.
   </p>
@@ -343,10 +343,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, { threshold: 0.5 });
 
-    const conceptBox = document.getElementById("conceptBox");
-    if (conceptBox) {
-        observer.observe(conceptBox);
-    }
+    const conceptBoxes = document.querySelectorAll(".concept");
+    conceptBoxes.forEach(box => observer.observe(box));
 });
 
 function openDatenschutzModal() {
@@ -356,6 +354,11 @@ function closeDatenschutzModal() {
     document.getElementById("datenschutzModal").style.display = "none";
 }
 
+
+
+function openKontaktModal() {
+    document.getElementById("kontaktModal").style.display = "block";
+}
 
 function openImpressumModal() {
     document.getElementById("impressumModal").style.display = "block";
