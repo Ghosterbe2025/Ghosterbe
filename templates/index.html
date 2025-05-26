@@ -6,15 +6,16 @@
 <title>Ghosterbe™</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
         html, body {
             margin: 0;
             padding: 0;
-            font-family: 'Open Sans', sans-serif;
-            background: #0a0a0a url('/static/bluelight.jpg') no-repeat center center fixed;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%) no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
-            color: white;
+            color: #0a0a0a;
             scroll-behavior: smooth;
         }
         header {
@@ -33,7 +34,7 @@
             align-items: center;
             font-family: 'DM Serif Display', serif;
             font-size: 24px;
-            color: white;
+            color: #0a0a0a;
         }
         .logo img {
             width: 28px;
@@ -52,7 +53,7 @@
         }
         .menu div {
             height: 3px;
-            background-color: white;
+            background-color: #0a0a0a;
             border-radius: 3px;
         }
         .hero {
@@ -75,26 +76,26 @@
         .hero button {
             font-size: 18px;
             padding: 12px 28px;
-            background-color: rgba(255, 255, 255, 0.15);
-            color: white;
-            border: 1px solid white;
+            background-color: #00ffcc;
+            color: #0a0a0a;
+            border: none;
             border-radius: 12px;
             cursor: pointer;
             backdrop-filter: blur(3px);
             transition: all 0.3s ease;
         }
         .hero button:hover {
-            background-color: rgba(255, 255, 255, 0.25);
+            background-color: #00e6b8;
         }
         .concept {
-            max-width: 960px;
+            max-width: 800px;
             margin: 60px auto;
             padding: 60px 40px;
             background-color: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(6px);
             border-radius: 16px;
             text-align: center;
-            box-shadow: 0 0 50px rgba(0, 255, 204, 0.08);
+            box-shadow: 0 12px 40px rgba(0, 255, 204, 0.15);
             opacity: 0;
             transform: translateY(40px);
             transition: all 1s ease;
@@ -133,7 +134,7 @@
             font-size: 14px;
         }
         footer a {
-            color: #aaa;
+            color: #ccc;
             margin: 0 10px;
             text-decoration: none;
         }
@@ -143,7 +144,7 @@
         .footer-icons {
             margin-top: 10px;
             font-size: 12px;
-            color: #aaa;
+            color: #ccc;
         }
         .modal {
             display: none;
@@ -163,7 +164,7 @@
             margin: 15% auto;
             padding: 30px;
             max-width: 400px;
-            color: white;
+            color: #0a0a0a;
             text-align: center;
             backdrop-filter: blur(15px);
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
@@ -264,12 +265,12 @@
         <a href="#" onclick="openFaqModal()">FAQ</a>
 </div>
 <div class="footer-icons">
-        <p style="text-align: center; font-size: 14px; color: #aaa; margin-top: 20px;">❤️ 10 % unserer Einnahmen spenden wir dauerhaft an Kinderhospize in ganz Deutschland.</p>
+        <p style="text-align: center; font-size: 14px; color: #ccc; margin-top: 20px;">❤️ 10 % unserer Einnahmen spenden wir dauerhaft an Kinderhospize in ganz Deutschland.</p>
 
 <div style="text-align: center; margin-top: 40px;">
-  <p style="color: #aaa; font-size: 14px;">Zahlungsabwicklung sicher durch</p>
+  <p style="color: #ccc; font-size: 14px;">Zahlungsabwicklung sicher durch</p>
   <img src="/static/digistore24-logo.svg" alt="Digistore24" style="height: 40px; margin-top: 10px;">
-  <p style="font-size: 12px; color: #666; margin-top: 5px;">
+  <p style="font-size: 12px; color: #aaa; margin-top: 5px;">
     Alle Rechte an Markenzeichen liegen bei der Digistore24 GmbH – Verwendung zur Anbieterkennzeichnung.
   </p>
 </div>
@@ -278,9 +279,9 @@
     </div>
 </footer>
 <div class="modal" id="agbModal">
-<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: #0a0a0a;">
 <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
-<button onclick="closeAgbModal()" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+<button onclick="closeAgbModal()" style="font-size: 24px; background: none; border: none; color: #0a0a0a; cursor: pointer;">✕</button>
 </div>
 <div style="padding: 20px;">
 <h2 style="margin-top: 0;">Allgemeine Geschäftsbedingungen (AGB)</h2>
@@ -296,7 +297,7 @@
 <p><strong>9. Rechtswahl &amp; Gerichtsstand:</strong> Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist, soweit gesetzlich zulässig, der Sitz des Anbieters. Vertragssprache ist Deutsch.</p>
 <p><strong>10. Schlussbestimmungen:</strong> Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein, bleibt die Wirksamkeit der übrigen Regelungen unberührt. Änderungen oder Ergänzungen bedürfen der Schriftform. Ghosterbe™ behält sich vor, diese AGB jederzeit anzupassen. Nutzer werden über Änderungen rechtzeitig informiert.</p>
 <p style="margin-top: 20px; color: #00ffcc;">Ghosterbe™ – Vertraulich. Verschlüsselt. Verantwortungsvoll.</p>
-<p style="margin-top: 30px; font-size: 13px; color: #aaa;">
+<p style="margin-top: 30px; font-size: 13px; color: #ccc;">
 Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urheberrecht. Jede unerlaubte Nutzung ist untersagt.
 </p>
 
@@ -304,7 +305,7 @@ Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urhe
 </div>
 </div>
 <div class="modal" id="ageModal">
-<div class="modal-content" style="position: relative; max-width: 480px; margin: 10% auto; padding: 40px 30px; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white; text-align: center;">
+<div class="modal-content" style="position: relative; max-width: 480px; margin: 10% auto; padding: 40px 30px; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: #0a0a0a; text-align: center;">
 <button onclick="closeModal()" style="
     position: absolute;
     top: 12px;
@@ -312,7 +313,7 @@ Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urhe
     font-size: 24px;
     background: none;
     border: none;
-    color: white;
+    color: #0a0a0a;
     cursor: pointer;
     line-height: 1;
 ">✕</button>
@@ -377,9 +378,9 @@ function openFaqModal() {
 </script>
 
 <div class="modal" id="datenschutzModal">
-<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: #0a0a0a;">
 <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
-<button onclick="closeDatenschutzModal()" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+<button onclick="closeDatenschutzModal()" style="font-size: 24px; background: none; border: none; color: #0a0a0a; cursor: pointer;">✕</button>
 </div>
 <div style="padding: 20px;">
 <h2>Datenschutzerklärung</h2>
@@ -396,7 +397,7 @@ Wenn Sie das Kontaktformular verwenden, wird Ihre Nachricht sicher über den Die
 <p><strong>7. Rechte:</strong><br/>Auskunft, Berichtigung, Löschung, Einschränkung, Übertragbarkeit, Widerruf, Widerspruch</p>
 <p><strong>8. Beschwerderecht:</strong><br/>Bei einer Datenschutzaufsichtsbehörde gemäß Art. 77 DSGVO</p>
 <p><strong>9. Änderungen:</strong><br/>Diese Erklärung kann angepasst werden. Die aktuelle Version finden Sie auf ghosterbe.de</p>
-<p style="margin-top: 30px; font-size: 13px; color: #aaa;">
+<p style="margin-top: 30px; font-size: 13px; color: #ccc;">
 Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urheberrecht. Jede unerlaubte Nutzung ist untersagt.
 </p>
 
@@ -406,9 +407,9 @@ Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urhe
 
 
 <div class="modal" id="impressumModal">
-<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: #0a0a0a;">
 <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
-<button onclick="closeImpressumModal()" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+<button onclick="closeImpressumModal()" style="font-size: 24px; background: none; border: none; color: #0a0a0a; cursor: pointer;">✕</button>
 </div>
 <div style="padding: 20px;">
 <h2>Impressum</h2>
@@ -436,7 +437,7 @@ Diese Website kann Verlinkungen zu externen Seiten Dritter enthalten, auf deren 
 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br/>
 <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a></p>
 
-<p style="margin-top: 30px; font-size: 13px; color: #aaa;">
+<p style="margin-top: 30px; font-size: 13px; color: #ccc;">
 Dieses Impressum wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urheberrecht. Jede unerlaubte Nutzung, Reproduktion oder Weiterverwendung ist untersagt.
 </p>
 </div>
@@ -445,21 +446,21 @@ Dieses Impressum wurde individuell für Ghosterbe™ erstellt und unterliegt dem
 
 
 <div class="modal" id="kontaktModal">
-  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 600px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 600px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: #0a0a0a;">
     <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
-      <button onclick="document.getElementById('kontaktModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+      <button onclick="document.getElementById('kontaktModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: #0a0a0a; cursor: pointer;">✕</button>
     </div>
     <div style="padding: 20px; text-align: left;">
       <h2>Kontaktformular</h2>
       <form action="https://formspree.io/f/mgvkjpzl" method="POST">
         <label for="name">Ihr Name:</label><br/>
-        <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: white;" /><br/>
+        <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #0a0a0a;" /><br/>
         <label for="email">Ihre E-Mail:</label><br/>
-        <input type="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: white;" /><br/>
+        <input type="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #0a0a0a;" /><br/>
         <label for="message">Ihre Nachricht:</label><br/>
-        <textarea name="message" rows="6" required style="width: 100%; padding: 8px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: white;"></textarea><br/>
+        <textarea name="message" rows="6" required style="width: 100%; padding: 8px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #0a0a0a;"></textarea><br/>
         <button type="submit" style="margin-top: 12px; background: #00ffcc; color: black; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">Nachricht senden</button>
-        <p style="font-size: 12px; color: #aaa; margin-top: 10px;"><em>Ihre Nachricht wird sicher über Formspree übermittelt. Es erfolgt keine dauerhafte Speicherung.</em></p>
+        <p style="font-size: 12px; color: #ccc; margin-top: 10px;"><em>Ihre Nachricht wird sicher über Formspree übermittelt. Es erfolgt keine dauerhafte Speicherung.</em></p>
       </form>
     </div>
   </div>
@@ -467,9 +468,9 @@ Dieses Impressum wurde individuell für Ghosterbe™ erstellt und unterliegt dem
 
 
 <div class="modal" id="faqModal">
-  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: #0a0a0a;">
     <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
-      <button onclick="document.getElementById('faqModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+      <button onclick="document.getElementById('faqModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: #0a0a0a; cursor: pointer;">✕</button>
     </div>
     <div style="padding: 20px; text-align: left;">
       <h2>Häufige Fragen (FAQ)</h2>
