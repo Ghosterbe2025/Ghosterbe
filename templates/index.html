@@ -242,7 +242,7 @@
 <div>
 <a href="#" onclick="openAgbModal()">AGB</a> |
         <a href="/impressum.html">Impressum</a> |
-        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="#" onclick="openDatenschutzModal()">Datenschutz</a>
 </div>
 <div class="footer-icons">
         ❤️ 10 % unserer Einnahmen spenden wir an Kinderhospize<br/>
@@ -320,6 +320,35 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(conceptBox);
     }
 });
+
+function openDatenschutzModal() {
+    document.getElementById("datenschutzModal").style.display = "block";
+}
+function closeDatenschutzModal() {
+    document.getElementById("datenschutzModal").style.display = "none";
+}
+
 </script>
+
+<div class="modal" id="datenschutzModal">
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+<div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
+<button onclick="closeDatenschutzModal()" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+</div>
+<div style="padding: 20px;">
+<h2>Datenschutzerklärung</h2>
+<p><strong>1. Verantwortlicher:</strong><br/>Ghosterbe™<br/>Inhaber: Okan [Nachname]<br/>[Straße, Hausnummer]<br/>[PLZ Ort, Land]<br/>E-Mail: kontakt@ghosterbe.de</p>
+<p><strong>2. Arten der verarbeiteten Daten:</strong><br/>Name, E-Mail, Adresse, Empfängerdaten, Dateien (verschlüsselt), IP-Adresse, freiwillige Angaben</p>
+<p><strong>3. Zwecke der Datenverarbeitung:</strong><br/>Vertragserfüllung, gesetzliche Pflichten, berechtigte Interessen, freiwillige Einwilligung</p>
+<p><strong>4. Datenweitergabe:</strong><br/>Nur bei gesetzlicher Pflicht, ausdrücklicher Einwilligung oder zur Vertragserfüllung. Auftragsverarbeiter gemäß Art. 28 DSGVO.</p>
+<p><strong>5. Datensicherheit:</strong><br/>SSL-Verschlüsselung, interne Zugriffsbeschränkung, Zero-Knowledge-Prinzip</p>
+<p><strong>6. Speicherdauer:</strong><br/>Nur so lange wie nötig oder gesetzlich erforderlich, danach Löschung oder Anonymisierung</p>
+<p><strong>7. Rechte:</strong><br/>Auskunft, Berichtigung, Löschung, Einschränkung, Übertragbarkeit, Widerruf, Widerspruch</p>
+<p><strong>8. Beschwerderecht:</strong><br/>Bei einer Datenschutzaufsichtsbehörde gemäß Art. 77 DSGVO</p>
+<p><strong>9. Änderungen:</strong><br/>Diese Erklärung kann angepasst werden. Die aktuelle Version finden Sie auf ghosterbe.de</p>
+</div>
+</div>
+</div>
+
 </body>
 </html>
