@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<title>Ghosterbe™</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background: #0a0a0a url('/static/bluelight.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            color: white;
+            scroll-behavior: smooth;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 24px;
+            color: white;
+        }
+        .logo img {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: brightness(0) invert(1);
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22px;
+            height: 18px;
+        }
+        .menu div {
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 20px 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .hero button {
+            font-size: 18px;
+            padding: 12px 28px;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid white;
+            border-radius: 12px;
+            cursor: pointer;
+            backdrop-filter: blur(3px);
+            transition: all 0.3s ease;
+        }
+        .hero button:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .concept {
+            max-width: 960px;
+            margin: 60px auto;
+            padding: 60px 40px;
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(6px);
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(0, 255, 204, 0.08);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease;
+        }
+        .concept.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .concept h2 {
+            font-size: 28px;
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 20px;
+        }
+        .concept p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .concept .slogan {
+            margin-top: 25px;
+            font-size: 15px;
+            color: #00ffcc;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .concept .footer-note {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #bbb;
+            font-weight: 500;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 14px;
+        }
+        footer a {
+            color: #aaa;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-icons {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            margin: 15% auto;
+            padding: 30px;
+            max-width: 400px;
+            color: white;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .modal-content h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .modal-content button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .confirm {
+            background: #00ffcc;
+            color: #000;
+        }
+        .confirm:hover {
+            background: #00e6b8;
+        }
+        .cancel {
+            background: #333;
+            color: #fff;
+        }
+        .cancel:hover {
+            background: #555;
+        }
+        @media (max-width: 768px) {
+            .concept {
+                margin: 30px 15px;
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="logo">
+<img alt="Key Icon" src="/static/keyicon_white.png"/>
+            Ghosterbe
+        </div>
+<div class="menu">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</header>
+<div class="hero">
+<h1>Willkommen bei Ghosterbe™</h1>
+<p>Dein digitales Erbe. Sicher. Vertrauensvoll. Verschlüsselt.</p>
+<button onclick="openModal()">Eintreten</button>
+</div>
+<div class="concept" id="conceptBox">
+<h2>Was ist Ghosterbe™?</h2>
+<p>
+            Ghosterbe™ ist die erste Plattform für digitale Nachlassvorsorge, die in enger Zusammenarbeit zwischen Mensch und Künstlicher Intelligenz entwickelt wurde – mit dem Ziel, digitale Vermögenswerte, persönliche Botschaften und vertrauliche Informationen auch über das eigene Leben hinaus sicher verfügbar zu machen.<br/><br/>
+            Im Zentrum steht ein Prinzip: <strong>Maximale Vertraulichkeit – selbst gegenüber uns.</strong><br/>
+            Alle gespeicherten Inhalte werden bereits <strong>clientseitig verschlüsselt</strong>. Das bedeutet: Nur der Nutzer besitzt die Schlüssel – weder Ghosterbe™ noch Dritte haben zu irgendeinem Zeitpunkt Zugriff auf die gespeicherten Daten.<br/><br/>
+            Unser System erlaubt es registrierten Nutzern, sensible Informationen wie Zugangsdaten, Nachrichten, Dokumente oder individuelle Hinweise digital zu hinterlegen – und im Fall anhaltender Inaktivität oder Todes, nach definierten Regeln, automatisiert an ausgewählte Empfänger freizugeben.<br/><br/>
+            Dabei garantieren wir:<br/>
+            – Ende-zu-Ende-Verschlüsselung<br/>
+            – Transparente Protokolle<br/>
+            – Einhaltung aller datenschutzrechtlichen Vorgaben nach DSGVO<br/><br/>
+            Ghosterbe™ ersetzt keine juristische Beratung oder notarielle Nachlassregelung, sondern ergänzt bestehende Vorsorgemaßnahmen um eine digitale Komponente – sicher, zukunftsgerichtet und vollständig kontrollierbar durch den Nutzer selbst.
+        </p>
+<div class="slogan">Vertraulich • Innovativ • Made in Germany</div>
+<div class="slogan">Zero-Knowledge-Technologie • DSGVO-konform • KI-gestützt entwickelt</div>
+<div class="footer-note">Professionell entwickelt &amp; gehostet in Deutschland 🇩🇪</div>
+</div>
+<footer>
+<div>
+<a href="#" onclick="openAgbModal()">AGB</a> |
+        <a href="/impressum.html">Impressum</a> |
+        <a href="/datenschutz.html">Datenschutz</a>
+</div>
+<div class="footer-icons">
+        ❤️ 10 % unserer Einnahmen spenden wir an Kinderhospize<br/>
+        🔐 Ende-zu-Ende-verschlüsselte Verarbeitung
+    </div>
+</footer>
+<div class="modal" id="agbModal">
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%%; max-width: 800px; margin: 5%% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+<div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
+<button onclick="closeAgbModal()" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+</div>
+<div style="padding: 20px;">
+<h2 style="margin-top: 0;">Allgemeine Geschäftsbedingungen (AGB)</h2>
+<p><strong>Stand:</strong> Mai 2025</p>
+<p><strong>1. Anbieterinformationen:</strong> Ghosterbe™ ist ein privat betriebenes Online-Angebot zur digitalen Vorsorge. Betreiber: [Name, Adresse, ggf. Handelsregister-Nr.].</p>
+<p><strong>2. Leistungsbeschreibung:</strong> Ghosterbe™ ermöglicht es Nutzern, persönliche Informationen, Dateien und Nachrichten verschlüsselt zu hinterlegen. Im Fall einer zuvor definierten Inaktivität oder bei bestätigtem Todesfall können diese Inhalte automatisch an definierte Empfänger übermittelt werden. Die gesamte Plattform ist verschlüsselt aufgebaut und basiert auf einer Zero-Knowledge-Struktur – das bedeutet: Nur der Nutzer kennt die Inhalte, Ghosterbe™ hat zu keinem Zeitpunkt Zugriff...</p>
+<p><strong>3. Vertragsschluss:</strong> Durch Abschluss des Zahlungsvorgangs und die erfolgreiche Registrierung auf Ghosterbe.de kommt ein rechtsgültiger Nutzungsvertrag zustande. Der Nutzer bestätigt mit Abschluss, volljährig (mind. 18 Jahre alt) und voll geschäftsfähig zu sein.</p>
+<p><strong>4. Preise &amp; Zahlungsbedingungen:</strong> Für die Nutzung wird eine einmalige Gebühr von 80–150 € erhoben. Für jeden hinzugefügten Empfänger wird ein Zusatzbetrag von ca. 10 € fällig. Die Zahlung erfolgt vor der Einrichtung und ist Voraussetzung für die Freischaltung der Leistungen. Eine Rückerstattung ist nach Leistungserbringung ausgeschlossen, es sei denn, gesetzlich zwingende Vorschriften sehen etwas anderes vor.</p>
+<p><strong>5. Technische Umsetzung &amp; Datenschutz:</strong> Alle Nutzerdaten werden clientseitig verschlüsselt. Die Betreiber haben zu keinem Zeitpunkt Einblick in die Inhalte. Die Verarbeitung erfolgt konform zur DSGVO. Es findet keine Weitergabe an Dritte statt. Optional angegebene Empfänger-Daten (E-Mail, Postadresse, Telefonnummer) werden ausschließlich zur Übermittlung genutzt. Ghosterbe™ nutzt ausschließlich Serverstandorte innerhalb der EU. Nutzer sind selbst verantwortlich für die sichere Aufbewahrung ihrer Zugangsdaten und Schlüssel.</p>
+<p><strong>6. Haftungsausschluss:</strong> Ghosterbe™ übernimmt keine Garantie für eine tatsächliche Zustellung der Inhalte im Todesfall, insbesondere wenn Empfänger-Daten fehlerhaft, veraltet oder technisch nicht erreichbar sind. Ghosterbe™ stellt ausschließlich eine technische Infrastruktur bereit. Eine Erfolgsgarantie für die tatsächliche Zustellung, Entschlüsselung oder Nutzung durch Empfänger besteht nicht. Ghosterbe™ haftet nicht für Schäden, die durch Dritte, technische Ausfälle, höhere Gewalt oder durch unsachgemäße Nutzung der Plattform entstehen.</p>
+<p><strong>7. Pflichten der Nutzer:</strong> Die Nutzer verpflichten sich, nur Inhalte zu hinterlegen, die nicht gegen geltendes Recht verstoßen. Es ist untersagt, Ghosterbe™ für illegale, gewaltverherrlichende, betrügerische oder sonstige rechtswidrige Zwecke zu nutzen. Ghosterbe™ behält sich vor, Zugänge bei Verstoß ohne Rückerstattung zu sperren.</p>
+<p><strong>8. Laufzeit &amp; Kündigung:</strong> Die Leistung gilt auf unbestimmte Zeit. Eine Kündigung seitens des Nutzers ist jederzeit möglich. Eine Rückerstattung bereits gezahlter Beträge ist ausgeschlossen, da es sich um eine einmalige technische Leistung handelt. Ghosterbe™ behält sich vor, den Betrieb bei schwerwiegenden Umständen einzustellen, garantiert jedoch eine vorherige Übergangsfrist zur Datensicherung.</p>
+<p><strong>9. Rechtswahl &amp; Gerichtsstand:</strong> Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist, soweit gesetzlich zulässig, der Sitz des Anbieters. Vertragssprache ist Deutsch.</p>
+<p><strong>10. Schlussbestimmungen:</strong> Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein, bleibt die Wirksamkeit der übrigen Regelungen unberührt. Änderungen oder Ergänzungen bedürfen der Schriftform. Ghosterbe™ behält sich vor, diese AGB jederzeit anzupassen. Nutzer werden über Änderungen rechtzeitig informiert.</p>
+<p style="margin-top: 20px; color: #00ffcc;">Ghosterbe™ – Vertraulich. Verschlüsselt. Verantwortungsvoll.</p>
+</div>
+</div>
+</div>
+<div class="modal" id="ageModal">
+<div class="modal-content" style="position: relative; max-width: 480px; margin: 10% auto; padding: 40px 30px; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white; text-align: center;">
+<button onclick="closeModal()" style="
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+">✕</button>
+<h2>Diese Plattform richtet sich an Personen ab 18 Jahren.<br/>Bitte bestätige dein Alter.</h2>
+<button class="confirm" onclick="proceedToLogin()">Ja</button>
+<button class="cancel" onclick="window.location.href='https://www.google.de'">Nein</button>
+<script>
+function openModal() {
+    document.getElementById("ageModal").style.display = "block";
+}
+function closeModal() {
+    document.getElementById("ageModal").style.display = "none";
+}
+function proceedToLogin() {
+    window.location.href = '/user-login';
+}
+function openAgbModal() {
+    document.getElementById("agbModal").style.display = "block";
+}
+function closeAgbModal() {
+    document.getElementById("agbModal").style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const conceptBox = document.getElementById("conceptBox");
+    if (conceptBox) {
+        observer.observe(conceptBox);
+    }
+});
+</script>
+</div></div></body>
+</html>
