@@ -241,7 +241,7 @@
 <footer>
 <div>
 <a href="#" onclick="openAgbModal()">AGB</a> |
-        <a href="/impressum.html">Impressum</a> |
+        <a href="#" onclick="openImpressumModal()">Impressum</a> |
         <a href="#" onclick="openDatenschutzModal()">Datenschutz</a>
 </div>
 <div class="footer-icons">
@@ -332,6 +332,14 @@ function closeDatenschutzModal() {
     document.getElementById("datenschutzModal").style.display = "none";
 }
 
+
+function openImpressumModal() {
+    document.getElementById("impressumModal").style.display = "block";
+}
+function closeImpressumModal() {
+    document.getElementById("impressumModal").style.display = "none";
+}
+
 </script>
 
 <div class="modal" id="datenschutzModal">
@@ -354,6 +362,45 @@ function closeDatenschutzModal() {
 Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urheberrecht. Jede unerlaubte Nutzung ist untersagt.
 </p>
 
+</div>
+</div>
+</div>
+
+
+<div class="modal" id="impressumModal">
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5%% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+<div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
+<button onclick="closeImpressumModal()" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+</div>
+<div style="padding: 20px;">
+<h2>Impressum</h2>
+<p><strong>Angaben gemäß § 5 TMG:</strong><br/>
+Ghosterbe™ – Digitale Nachlassplattform<br/>
+Inhaber: Okan [Nachname]<br/>
+[Straße und Hausnummer]<br/>
+[PLZ Ort, Deutschland]<br/>
+E-Mail: kontakt@ghosterbe.de</p>
+
+<p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br/>
+Okan [Nachname]<br/>
+Anschrift wie oben</p>
+
+<p><strong>Hinweis zur Plattform Ghosterbe™:</strong><br/>
+Ghosterbe™ bietet technische Lösungen zur digitalen Vorsorge und Nachlassorganisation an. Es erfolgt keine rechtliche Beratung, notarielle Betreuung oder Überprüfung von Inhalten. Nutzer sind für die inhaltliche und rechtliche Zulässigkeit ihrer Angaben selbst verantwortlich.</p>
+
+<p><strong>Haftung für Inhalte:</strong><br/>
+Die Inhalte dieser Seite wurden mit größtmöglicher Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität können wir jedoch keine Gewähr übernehmen. Gemäß § 7 Abs. 1 TMG sind wir für eigene Inhalte verantwortlich, nach §§ 8–10 TMG jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
+
+<p><strong>Haftung für Links:</strong><br/>
+Diese Website kann Verlinkungen zu externen Seiten Dritter enthalten, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte übernehmen wir keine Haftung. Verantwortlich ist stets der jeweilige Anbieter oder Betreiber der verlinkten Seiten.</p>
+
+<p><strong>EU-Streitschlichtung:</strong><br/>
+Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br/>
+<a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a></p>
+
+<p style="margin-top: 30px; font-size: 13px; color: #aaa;">
+Dieses Impressum wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urheberrecht. Jede unerlaubte Nutzung, Reproduktion oder Weiterverwendung ist untersagt.
+</p>
 </div>
 </div>
 </div>
