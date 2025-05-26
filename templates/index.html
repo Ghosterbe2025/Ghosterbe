@@ -240,7 +240,7 @@
 </div>
 <footer>
 <div>
-<a href="#" onclick="openAgbModal()">AGB</a> |
+<a href="#" onclick="openKontaktModal()">Kontakt</a> | <a href="#" onclick="openAgbModal()">AGB</a> |
         <a href="#" onclick="openImpressumModal()">Impressum</a> |
         <a href="#" onclick="openDatenschutzModal()">Datenschutz</a>
 </div>
@@ -354,6 +354,26 @@ function closeImpressumModal() {
     document.getElementById("impressumModal").style.display = "none";
 }
 
+
+function openKontaktModal() {
+    document.getElementById("kontaktModal").style.display = "block";
+}
+function closeKontaktModal() {
+    document.getElementById("kontaktModal").style.display = "none";
+}
+function sendKontaktForm() {
+    const name = document.getElementById("kontaktName").value;
+    const nachricht = document.getElementById("kontaktNachricht").value;
+
+    if (!name || !nachricht) {
+        alert("Bitte alle Felder ausfüllen.");
+        return;
+    }
+
+    const mailtoLink = `mailto:ghosterbe@gmx.de?subject=Kontaktanfrage von ${encodeURIComponent(name)}&body=${encodeURIComponent(nachricht)}`;
+    window.location.href = mailtoLink;
+}
+
 </script>
 
 <div class="modal" id="datenschutzModal">
@@ -417,6 +437,24 @@ Dieses Impressum wurde individuell für Ghosterbe™ erstellt und unterliegt dem
 </p>
 </div>
 </div>
+</div>
+
+
+<div class="modal" id="kontaktModal">
+  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 600px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+    <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
+      <button onclick="closeKontaktModal()" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+    </div>
+    <div style="padding: 20px; text-align: left;">
+      <h2>Kontaktformular</h2>
+      <label for="kontaktName">Ihr Name:</label><br/>
+      <input type="text" id="kontaktName" style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: white;" /><br/>
+      <label for="kontaktNachricht">Ihre Nachricht:</label><br/>
+      <textarea id="kontaktNachricht" rows="6" style="width: 100%; padding: 8px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: white;"></textarea><br/>
+      <button onclick="sendKontaktForm()" style="margin-top: 12px; background: #00ffcc; color: black; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">Nachricht senden</button>
+      <p style="font-size: 12px; color: #aaa; margin-top: 10px;"><em>Ihre Nachricht wird per E-Mail übertragen. Es erfolgt keine Speicherung auf dem Server.</em></p>
+    </div>
+  </div>
 </div>
 
 </body>
