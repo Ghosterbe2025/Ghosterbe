@@ -6,7 +6,7 @@
 <title>Ghosterbe™</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
         html, body {
             margin: 0;
@@ -203,39 +203,71 @@
                 padding: 40px 20px;
             }
         }
-    </style>
+    
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.accordion-toggle {
+  background-color: #111;
+  color: #f0f0f0;
+  border: 1px solid #333;
+  padding: 18px 24px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+.accordion-toggle:hover {
+  background-color: #222;
+}
+.accordion-content {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 12px 12px;
+  padding: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+.accordion.open .accordion-content {
+  max-height: 2000px;
+  padding: 20px;
+}
+</style>
 </head>
 <body>
-
 <header>
-  <div class="logo">
-    <img alt="Key Icon" src="/static/keyicon_white.png"/>
-    Ghosterbe
-  </div>
-  <nav style="display: flex; gap: 20px; align-items: center;">
-    <a href="#konzept" style="color: #f0f0f0; text-decoration: none; font-weight: 500;">Konzept</a>
-    <a href="#warum" style="color: #f0f0f0; text-decoration: none; font-weight: 500;">Warum</a>
-    <a href="#funktion" style="color: #f0f0f0; text-decoration: none; font-weight: 500;">Funktionsweise</a>
-    <a href="/user-login" style="margin-left: 20px; padding: 10px 18px; background: #00ffcc; color: #000; border-radius: 10px; font-weight: 600; text-decoration: none;">Login</a>
-  </nav>
-</header>
-
 <div class="logo">
 <img alt="Key Icon" src="/static/keyicon_white.png"/>
-            Ghosterbe
-        </div>
-<div class="menu">
-<div></div>
-<div></div>
-<div></div>
-</div>
+    Ghosterbe
+  </div>
+<nav style="display: flex; gap: 20px; align-items: center;">
+<a href="#konzept" style="color: #f0f0f0; text-decoration: none; font-weight: 500;">Konzept</a>
+<a href="#warum" style="color: #f0f0f0; text-decoration: none; font-weight: 500;">Warum</a>
+<a href="#funktion" style="color: #f0f0f0; text-decoration: none; font-weight: 500;">Funktionsweise</a>
+<a href="/user-login" style="margin-left: 20px; padding: 10px 18px; background: #00ffcc; color: #000; border-radius: 10px; font-weight: 600; text-decoration: none;">Login</a>
+</nav>
 </header>
+
+
+
 <div class="hero">
 <h1>Willkommen bei Ghosterbe™</h1>
 <p>Dein digitales Erbe. Sicher. Vertrauensvoll. Verschlüsselt.</p>
 <button onclick="openModal()">Eintreten</button>
 </div>
-<div class="concept" id="konzept">
+
+
+
+
+
+<section class="accordion-container" style="max-width: 800px; margin: 120px auto 60px; padding: 0 20px;">
+<div class="accordion">
+<button class="accordion-toggle">Unser Konzept</button>
+<div class="accordion-content">
 <h2>Was ist Ghosterbe™?</h2>
 <p>
             Ghosterbe™ ist die erste Plattform für digitale Nachlassvorsorge, die in enger Zusammenarbeit zwischen Mensch und Künstlicher Intelligenz entwickelt wurde – mit dem Ziel, digitale Vermögenswerte, persönliche Botschaften und vertrauliche Informationen auch über das eigene Leben hinaus sicher verfügbar zu machen.<br/><br/>
@@ -252,35 +284,37 @@
 <div class="slogan">Zero-Knowledge-Technologie • DSGVO-konform • KI-gestützt entwickelt</div>
 <div class="footer-note">Professionell entwickelt &amp; gehostet in Deutschland 🇩🇪</div>
 </div>
-
-<div class="concept" id="warum">
-  <h2>Wieso Ghosterbe?</h2>
-  <p>
+</div>
+<div class="accordion">
+<button class="accordion-toggle">Warum wir das tun</button>
+<div class="accordion-content">
+<h2>Wieso Ghosterbe?</h2>
+<p>
     Weil es im digitalen Zeitalter keine Ausreden mehr geben darf, wenn es um Verantwortung geht.<br/><br/>
     Ghosterbe™ ist mehr als nur ein Datensafe – es ist ein Versprechen: Dass deine Worte, Werte und dein digitales Vermächtnis nicht verloren gehen. In einer Welt voller Unsicherheiten schaffen wir einen geschützten Raum, in dem du selbst entscheidest, <strong>wer was wann bekommt</strong> – und niemand sonst.<br/><br/>
     Die Technik bleibt im Hintergrund. Die Kontrolle liegt bei dir.<br/>
     Ghosterbe™ speichert nichts, was du nicht freigibst. <strong>Wir haben keinen Zugriff – nicht heute, nicht morgen, nie.</strong> Nur du trägst den Schlüssel zu deinem digitalen Erbe.<br/><br/>
     Du bestimmst die Empfänger. Du definierst die Regeln. Du entscheidest, wann dein Ghosterbe aktiviert wird. Alles andere übernehmen wir – verschlüsselt, abgesichert, dokumentiert.<br/><br/>
     Ghosterbe™ steht für einen neuen Umgang mit digitalen Werten: <strong>respektvoll, verschlüsselt, menschlich.</strong>
-  </p>
-  <div class="slogan">Nur du hast die Entscheidung. Ghosterbe™ macht den Rest.</div>
-  <div class="footer-note">© 2025 Ghosterbe™ – Alle Rechte vorbehalten.</div>
+</p>
+<div class="slogan">Nur du hast die Entscheidung. Ghosterbe™ macht den Rest.</div>
+<div class="footer-note">© 2025 Ghosterbe™ – Alle Rechte vorbehalten.</div>
 </div>
-
-
 </div>
-
-<div class="concept" id="funktion">
-  <h2>So funktioniert’s</h2>
-  <p>
+<div class="accordion">
+<button class="accordion-toggle">So funktioniert’s</button>
+<div class="accordion-content">
+<h2>So funktioniert’s</h2>
+<p>
     Ghosterbe™ folgt einem klaren Ablauf:<br/><br/>
-    <strong>1. Erstellen:</strong> Du legst dein Ghosterbe an – inklusive Dateien, Nachrichten oder Anweisungen.<br/>
-    <strong>2. Empfänger wählen:</strong> Du bestimmst genau, wer was wann erhalten soll – mit Zustellart und Frist.<br/>
-    <strong>3. Automatisierte Freigabe:</strong> Nach längerer Inaktivität wird dein digitales Erbe automatisch übertragen – verschlüsselt, dokumentiert, vertrauenswürdig.
+<strong>1. Erstellen:</strong> Du legst dein Ghosterbe an – inklusive Dateien, Nachrichten oder Anweisungen.<br/>
+<strong>2. Empfänger wählen:</strong> Du bestimmst genau, wer was wann erhalten soll – mit Zustellart und Frist.<br/>
+<strong>3. Automatisierte Freigabe:</strong> Nach längerer Inaktivität wird dein digitales Erbe automatisch übertragen – verschlüsselt, dokumentiert, vertrauenswürdig.
   </p>
-  <div class="slogan">Einfach. Sicher. Automatisch. Ghosterbe™ denkt für dich mit.</div>
+<div class="slogan">Einfach. Sicher. Automatisch. Ghosterbe™ denkt für dich mit.</div>
 </div>
-
+</div>
+</section>
 <footer>
 <div>
 <a href="#" onclick="openKontaktModal()">Kontakt</a> | <a href="#" onclick="openAgbModal()">AGB</a> |
@@ -289,12 +323,11 @@
         <a href="#" onclick="openFaqModal()">FAQ</a>
 </div>
 <div class="footer-icons">
-        <p style="text-align: center; font-size: 14px; color: #ccc; margin-top: 20px;">❤️ 10 % unserer Einnahmen spenden wir dauerhaft an Kinderhospize in ganz Deutschland.</p>
-
+<p style="text-align: center; font-size: 14px; color: #ccc; margin-top: 20px;">❤️ 10 % unserer Einnahmen spenden wir dauerhaft an Kinderhospize in ganz Deutschland.</p>
 <div style="text-align: center; margin-top: 40px;">
-  <p style="color: #ccc; font-size: 14px;">Zahlungsabwicklung sicher durch</p>
-  <img src="/static/digistore24-logo.svg" alt="Digistore24" style="height: 40px; margin-top: 10px;">
-  <p style="font-size: 12px; color: #aaa; margin-top: 5px;">
+<p style="color: #ccc; font-size: 14px;">Zahlungsabwicklung sicher durch</p>
+<img alt="Digistore24" src="/static/digistore24-logo.svg" style="height: 40px; margin-top: 10px;"/>
+<p style="font-size: 12px; color: #aaa; margin-top: 5px;">
     Alle Rechte an Markenzeichen liegen bei der Digistore24 GmbH – Verwendung zur Anbieterkennzeichnung.
   </p>
 </div>
@@ -324,7 +357,6 @@
 <p style="margin-top: 30px; font-size: 13px; color: #ccc;">
 Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urheberrecht. Jede unerlaubte Nutzung ist untersagt.
 </p>
-
 </div>
 </div>
 </div>
@@ -344,7 +376,6 @@ Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urhe
 <h2>Diese Plattform richtet sich an Personen ab 18 Jahren.<br/>Bitte bestätige dein Alter.</h2>
 <button class="confirm" onclick="proceedToLogin()">Ja</button>
 <button class="cancel" onclick="window.location.href='https://www.google.de'">Nein</button>
-
 </div></div>
 <script>
 function openModal() {
@@ -400,7 +431,6 @@ function openFaqModal() {
     document.getElementById('faqModal').style.display = 'block';
 }
 </script>
-
 <div class="modal" id="datenschutzModal">
 <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.08); color: #f0f0f0;">
 <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
@@ -414,22 +444,17 @@ function openFaqModal() {
 <p><strong>4. Datenweitergabe:</strong><br/>Nur bei gesetzlicher Pflicht, ausdrücklicher Einwilligung oder zur Vertragserfüllung. Auftragsverarbeiter gemäß Art. 28 DSGVO.</p>
 <p><strong>5. Datensicherheit:</strong><br/>SSL-Verschlüsselung, interne Zugriffsbeschränkung, Zero-Knowledge-Prinzip</p>
 <p><strong>6. Speicherdauer:</strong><br/>Nur so lange wie nötig oder gesetzlich erforderlich, danach Löschung oder Anonymisierung</p>
-
 <p><strong>Kontaktformular via Formspree:</strong><br/>
 Wenn Sie das Kontaktformular verwenden, wird Ihre Nachricht sicher über den Dienst Formspree (formspree.io) an uns übermittelt. Die Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage genutzt und nicht dauerhaft gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
-
 <p><strong>7. Rechte:</strong><br/>Auskunft, Berichtigung, Löschung, Einschränkung, Übertragbarkeit, Widerruf, Widerspruch</p>
 <p><strong>8. Beschwerderecht:</strong><br/>Bei einer Datenschutzaufsichtsbehörde gemäß Art. 77 DSGVO</p>
 <p><strong>9. Änderungen:</strong><br/>Diese Erklärung kann angepasst werden. Die aktuelle Version finden Sie auf ghosterbe.de</p>
 <p style="margin-top: 30px; font-size: 13px; color: #ccc;">
 Dieser Text wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urheberrecht. Jede unerlaubte Nutzung ist untersagt.
 </p>
-
 </div>
 </div>
 </div>
-
-
 <div class="modal" id="impressumModal">
 <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.08); color: #f0f0f0;">
 <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
@@ -443,81 +468,72 @@ Inhaber: Okan [Nachname]<br/>
 [Straße und Hausnummer]<br/>
 [PLZ Ort, Deutschland]<br/>
 E-Mail: kontakt@ghosterbe.de</p>
-
 <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br/>
 Okan [Nachname]<br/>
 Anschrift wie oben</p>
-
 <p><strong>Hinweis zur Plattform Ghosterbe™:</strong><br/>
 Ghosterbe™ bietet technische Lösungen zur digitalen Vorsorge und Nachlassorganisation an. Es erfolgt keine rechtliche Beratung, notarielle Betreuung oder Überprüfung von Inhalten. Nutzer sind für die inhaltliche und rechtliche Zulässigkeit ihrer Angaben selbst verantwortlich.</p>
-
 <p><strong>Haftung für Inhalte:</strong><br/>
 Die Inhalte dieser Seite wurden mit größtmöglicher Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität können wir jedoch keine Gewähr übernehmen. Gemäß § 7 Abs. 1 TMG sind wir für eigene Inhalte verantwortlich, nach §§ 8–10 TMG jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
-
 <p><strong>Haftung für Links:</strong><br/>
 Diese Website kann Verlinkungen zu externen Seiten Dritter enthalten, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte übernehmen wir keine Haftung. Verantwortlich ist stets der jeweilige Anbieter oder Betreiber der verlinkten Seiten.</p>
-
 <p><strong>EU-Streitschlichtung:</strong><br/>
 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br/>
-<a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a></p>
-
+<a href="https://ec.europa.eu/consumers/odr" rel="noopener noreferrer" target="_blank">https://ec.europa.eu/consumers/odr</a></p>
 <p style="margin-top: 30px; font-size: 13px; color: #ccc;">
 Dieses Impressum wurde individuell für Ghosterbe™ erstellt und unterliegt dem Urheberrecht. Jede unerlaubte Nutzung, Reproduktion oder Weiterverwendung ist untersagt.
 </p>
 </div>
 </div>
 </div>
-
-
 <div class="modal" id="kontaktModal">
-  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 600px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.08); color: #f0f0f0;">
-    <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
-      <button onclick="document.getElementById('kontaktModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: #f0f0f0; cursor: pointer;">✕</button>
-    </div>
-    <div style="padding: 20px; text-align: left;">
-      <h2>Kontaktformular</h2>
-      <form action="https://formspree.io/f/mgvkjpzl" method="POST">
-        <label for="name">Ihr Name:</label><br/>
-        <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #f0f0f0;" /><br/>
-        <label for="email">Ihre E-Mail:</label><br/>
-        <input type="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #f0f0f0;" /><br/>
-        <label for="message">Ihre Nachricht:</label><br/>
-        <textarea name="message" rows="6" required style="width: 100%; padding: 8px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #f0f0f0;"></textarea><br/>
-        <button type="submit" style="margin-top: 12px; background: #00ffcc; color: black; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">Nachricht senden</button>
-        <p style="font-size: 12px; color: #ccc; margin-top: 10px;"><em>Ihre Nachricht wird sicher über Formspree übermittelt. Es erfolgt keine dauerhafte Speicherung.</em></p>
-      </form>
-    </div>
-  </div>
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 600px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.08); color: #f0f0f0;">
+<div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
+<button onclick="document.getElementById('kontaktModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: #f0f0f0; cursor: pointer;">✕</button>
 </div>
-
-
+<div style="padding: 20px; text-align: left;">
+<h2>Kontaktformular</h2>
+<form action="https://formspree.io/f/mgvkjpzl" method="POST">
+<label for="name">Ihr Name:</label><br/>
+<input name="name" required="" style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #f0f0f0;" type="text"/><br/>
+<label for="email">Ihre E-Mail:</label><br/>
+<input name="email" required="" style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #f0f0f0;" type="email"/><br/>
+<label for="message">Ihre Nachricht:</label><br/>
+<textarea name="message" required="" rows="6" style="width: 100%; padding: 8px; border-radius: 8px; border: none; background: rgba(255,255,255,0.1); color: #f0f0f0;"></textarea><br/>
+<button style="margin-top: 12px; background: #00ffcc; color: black; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;" type="submit">Nachricht senden</button>
+<p style="font-size: 12px; color: #ccc; margin-top: 10px;"><em>Ihre Nachricht wird sicher über Formspree übermittelt. Es erfolgt keine dauerhafte Speicherung.</em></p>
+</form>
+</div>
+</div>
+</div>
 <div class="modal" id="faqModal">
-  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.08); color: #f0f0f0;">
-    <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
-      <button onclick="document.getElementById('faqModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: #f0f0f0; cursor: pointer;">✕</button>
-    </div>
-    <div style="padding: 20px; text-align: left;">
-      <h2>Häufige Fragen (FAQ)</h2>
-      <p><strong>1. Ist Ghosterbe™ ein rechtlich anerkanntes Testament?</strong><br/>
-      Nein. Ghosterbe™ ersetzt kein notarielles Testament und stellt keine juristische Beratung dar. Es ist eine digitale Ergänzung: Eine sichere Möglichkeit, persönliche Botschaften, Zugangsdaten oder Hinweise zu hinterlegen, die im Ernstfall automatisch an ausgewählte Empfänger übermittelt werden.</p>
-
-      <p><strong>2. Wer kann meine gespeicherten Inhalte einsehen – auch im Ernstfall?</strong><br/>
-      Nur du. Ghosterbe™ verwendet clientseitige Zero-Knowledge-Verschlüsselung. Das bedeutet: Deine Daten werden bereits auf deinem Gerät verschlüsselt – Ghosterbe™ selbst hat zu keinem Zeitpunkt Zugriff auf deine Inhalte.</p>
-
-      <p><strong>3. Wie funktioniert die Freigabe an meine Empfänger – und wie wird sie zugestellt?</strong><br/>
-      Nach deiner Registrierung startet ein Inaktivitäts-Timer. Alle 90 Tage erhältst du eine Erinnerungs-SMS oder E-Mail. Bleibt eine Reaktion aus, beginnt nach der definierten Wartezeit ein automatischer Freigabeprozess an die Empfänger – per E-Mail, SMS oder optional Briefpost.</p>
-
-      <p><strong>4. Kann ich mein Ghosterbe jederzeit ändern oder löschen?</strong><br/>
-      Ja. Alles kann jederzeit angepasst oder gelöscht werden – inklusive Dateien, Empfänger oder Bedingungen. Änderungen greifen sofort.</p>
-
-      <p><strong>5. Wie sicher sind meine Daten – technisch und rechtlich?</strong><br/>
-      Die Speicherung erfolgt vollständig verschlüsselt (Ende-zu-Ende). Ghosterbe™ nutzt ausschließlich DSGVO-konforme Serverstandorte in der EU.</p>
-
-      <p><strong>6. Gibt es Zusatzfunktionen für sensible Informationen?</strong><br/>
-      Ja. Du kannst PIN-Schutz, doppelte Zustellung oder verzögerte Freigabe pro Datei aktivieren.</p>
-    </div>
-  </div>
+<div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.08); color: #f0f0f0;">
+<div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
+<button onclick="document.getElementById('faqModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: #f0f0f0; cursor: pointer;">✕</button>
 </div>
-
-</body>
+<div style="padding: 20px; text-align: left;">
+<h2>Häufige Fragen (FAQ)</h2>
+<p><strong>1. Ist Ghosterbe™ ein rechtlich anerkanntes Testament?</strong><br/>
+      Nein. Ghosterbe™ ersetzt kein notarielles Testament und stellt keine juristische Beratung dar. Es ist eine digitale Ergänzung: Eine sichere Möglichkeit, persönliche Botschaften, Zugangsdaten oder Hinweise zu hinterlegen, die im Ernstfall automatisch an ausgewählte Empfänger übermittelt werden.</p>
+<p><strong>2. Wer kann meine gespeicherten Inhalte einsehen – auch im Ernstfall?</strong><br/>
+      Nur du. Ghosterbe™ verwendet clientseitige Zero-Knowledge-Verschlüsselung. Das bedeutet: Deine Daten werden bereits auf deinem Gerät verschlüsselt – Ghosterbe™ selbst hat zu keinem Zeitpunkt Zugriff auf deine Inhalte.</p>
+<p><strong>3. Wie funktioniert die Freigabe an meine Empfänger – und wie wird sie zugestellt?</strong><br/>
+      Nach deiner Registrierung startet ein Inaktivitäts-Timer. Alle 90 Tage erhältst du eine Erinnerungs-SMS oder E-Mail. Bleibt eine Reaktion aus, beginnt nach der definierten Wartezeit ein automatischer Freigabeprozess an die Empfänger – per E-Mail, SMS oder optional Briefpost.</p>
+<p><strong>4. Kann ich mein Ghosterbe jederzeit ändern oder löschen?</strong><br/>
+      Ja. Alles kann jederzeit angepasst oder gelöscht werden – inklusive Dateien, Empfänger oder Bedingungen. Änderungen greifen sofort.</p>
+<p><strong>5. Wie sicher sind meine Daten – technisch und rechtlich?</strong><br/>
+      Die Speicherung erfolgt vollständig verschlüsselt (Ende-zu-Ende). Ghosterbe™ nutzt ausschließlich DSGVO-konforme Serverstandorte in der EU.</p>
+<p><strong>6. Gibt es Zusatzfunktionen für sensible Informationen?</strong><br/>
+      Ja. Du kannst PIN-Schutz, doppelte Zustellung oder verzögerte Freigabe pro Datei aktivieren.</p>
+</div>
+</div>
+</div>
+<script>
+document.querySelectorAll('.accordion-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const accordion = button.parentElement;
+    accordion.classList.toggle('open');
+  });
+});
+</script></body>
 </html>
