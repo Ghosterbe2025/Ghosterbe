@@ -254,32 +254,6 @@
 </div>
 
 
-<div class="concept" id="faqBox">
-  <h2>Häufige Fragen (FAQ)</h2>
-
-  <p><strong>1. Ist Ghosterbe™ ein rechtlich anerkanntes Testament?</strong><br/>
-  Nein. Ghosterbe™ ersetzt kein notarielles Testament und stellt keine juristische Beratung dar. Es ist eine digitale Ergänzung: Eine sichere Möglichkeit, persönliche Botschaften, Zugangsdaten oder Hinweise zu hinterlegen, die im Ernstfall automatisch an ausgewählte Empfänger übermittelt werden. Für rechtliche Nachlassregelungen empfehlen wir weiterhin zusätzlich ein notariell beglaubigtes Testament.</p>
-
-  <p><strong>2. Wer kann meine gespeicherten Inhalte einsehen – auch im Ernstfall?</strong><br/>
-  Nur du. Ghosterbe™ verwendet clientseitige Zero-Knowledge-Verschlüsselung. Das bedeutet: Deine Daten werden bereits auf deinem Gerät verschlüsselt – noch bevor sie gespeichert werden. Ghosterbe™ selbst hat zu keinem Zeitpunkt Zugriff auf deine Inhalte. Auch im Ernstfall (z. B. Tod, Behördenanfrage) können wir nichts entschlüsseln – wir können nur das weiterleiten, was du freigegeben hast.</p>
-
-  <p><strong>3. Wie funktioniert die Freigabe an meine Empfänger – und wie wird sie zugestellt?</strong><br/>
-  Nach deiner Registrierung läuft ein geschützter Inaktivitäts-Timer. Alle 90 Tage senden wir dir automatisch eine verschlüsselte Erinnerungsnachricht per SMS und/oder E-Mail, um dich daran zu erinnern, dich aktiv einzuloggen. Reagierst du nicht, beginnt nach Ablauf der gewählten Inaktivitätszeit (z. B. 12 Monate) ein mehrstufiger Freigabeprozess. Deine gespeicherten Inhalte werden dann – je nach Einstellung – an die hinterlegten Empfänger übermittelt. Du bestimmst den Zustellweg:
-  – Per E-Mail (verschlüsselt),
-  – Per SMS mit Freischaltcode,
-  – Optional auch per Briefpost mit Zugriffsanleitung.
-  Alles erfolgt protokolliert, sicher und nach deinen Vorgaben.</p>
-
-  <p><strong>4. Kann ich mein Ghosterbe jederzeit ändern oder löschen?</strong><br/>
-  Ja. Du kannst dein gesamtes Ghosterbe, einzelne Dateien oder Empfänger jederzeit bearbeiten, deaktivieren oder löschen. Änderungen greifen sofort. Die Plattform speichert nur das, was du selbst aktiv freigibst. Es gibt keine automatischen Backups und keine versteckte Speicherung.</p>
-
-  <p><strong>5. Wie sicher sind meine Daten – technisch und rechtlich?</strong><br/>
-  Deine Daten werden vollständig Ende-zu-Ende verschlüsselt gespeichert. Ghosterbe™ hat keinerlei Einblick. Die Server befinden sich ausschließlich in der EU, alle Prozesse sind DSGVO-konform. Darüber hinaus sind Transparenz, Protokollierung und Nutzerkontrolle zentrale Bestandteile unseres Konzepts. Wir sehen, speichern oder analysieren keine Inhalte.</p>
-
-  <p><strong>6. Kann ich für besonders sensible Inhalte eine doppelte Absicherung aktivieren?</strong><br/>
-  Ja. Du kannst pro Datei oder Nachricht festlegen, ob zusätzlich zu einer Standardfreigabe ein PIN-Schutz, eine Zweitzustellung an zwei Empfänger oder eine zeitverzögerte Freigabe (z. B. 30 Tage später) aktiv sein soll. So behältst du bei besonders vertraulichen Informationen die volle Kontrolle – auch über den Zeitpunkt und die Form der Übergabe.</p>
-
-  <div class="slogan">Deine Fragen – unsere Verantwortung. Ghosterbe™ steht für maximale Transparenz.</div>
 </div>
 
 <footer>
@@ -287,7 +261,7 @@
 <a href="#" onclick="openKontaktModal()">Kontakt</a> | <a href="#" onclick="openAgbModal()">AGB</a> |
         <a href="#" onclick="openImpressumModal()">Impressum</a> |
         <a href="#" onclick="openDatenschutzModal()">Datenschutz</a> |
-        <a href="#faqBox">FAQ</a>
+        <a href="#" onclick="openFaqModal()">FAQ</a>
 </div>
 <div class="footer-icons">
         <p style="text-align: center; font-size: 14px; color: #aaa; margin-top: 20px;">❤️ 10 % unserer Einnahmen spenden wir dauerhaft an Kinderhospize in ganz Deutschland.</p>
@@ -397,6 +371,9 @@ function closeImpressumModal() {
     document.getElementById("impressumModal").style.display = "none";
 }
 
+function openFaqModal() {
+    document.getElementById('faqModal').style.display = 'block';
+}
 </script>
 
 <div class="modal" id="datenschutzModal">
@@ -484,6 +461,35 @@ Dieses Impressum wurde individuell für Ghosterbe™ erstellt und unterliegt dem
         <button type="submit" style="margin-top: 12px; background: #00ffcc; color: black; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">Nachricht senden</button>
         <p style="font-size: 12px; color: #aaa; margin-top: 10px;"><em>Ihre Nachricht wird sicher über Formspree übermittelt. Es erfolgt keine dauerhafte Speicherung.</em></p>
       </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="faqModal">
+  <div class="modal-content" style="position: relative; max-height: 80vh; overflow-y: auto; width: 90%; max-width: 800px; margin: 5% auto; padding: 0; border-radius: 16px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); background: rgba(255,255,255,0.05); color: white;">
+    <div style="position: sticky; top: 0; background: rgba(0,0,0,0.6); padding: 10px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 100;">
+      <button onclick="document.getElementById('faqModal').style.display='none'" style="font-size: 24px; background: none; border: none; color: white; cursor: pointer;">✕</button>
+    </div>
+    <div style="padding: 20px; text-align: left;">
+      <h2>Häufige Fragen (FAQ)</h2>
+      <p><strong>1. Ist Ghosterbe™ ein rechtlich anerkanntes Testament?</strong><br/>
+      Nein. Ghosterbe™ ersetzt kein notarielles Testament und stellt keine juristische Beratung dar. Es ist eine digitale Ergänzung: Eine sichere Möglichkeit, persönliche Botschaften, Zugangsdaten oder Hinweise zu hinterlegen, die im Ernstfall automatisch an ausgewählte Empfänger übermittelt werden.</p>
+
+      <p><strong>2. Wer kann meine gespeicherten Inhalte einsehen – auch im Ernstfall?</strong><br/>
+      Nur du. Ghosterbe™ verwendet clientseitige Zero-Knowledge-Verschlüsselung. Das bedeutet: Deine Daten werden bereits auf deinem Gerät verschlüsselt – Ghosterbe™ selbst hat zu keinem Zeitpunkt Zugriff auf deine Inhalte.</p>
+
+      <p><strong>3. Wie funktioniert die Freigabe an meine Empfänger – und wie wird sie zugestellt?</strong><br/>
+      Nach deiner Registrierung startet ein Inaktivitäts-Timer. Alle 90 Tage erhältst du eine Erinnerungs-SMS oder E-Mail. Bleibt eine Reaktion aus, beginnt nach der definierten Wartezeit ein automatischer Freigabeprozess an die Empfänger – per E-Mail, SMS oder optional Briefpost.</p>
+
+      <p><strong>4. Kann ich mein Ghosterbe jederzeit ändern oder löschen?</strong><br/>
+      Ja. Alles kann jederzeit angepasst oder gelöscht werden – inklusive Dateien, Empfänger oder Bedingungen. Änderungen greifen sofort.</p>
+
+      <p><strong>5. Wie sicher sind meine Daten – technisch und rechtlich?</strong><br/>
+      Die Speicherung erfolgt vollständig verschlüsselt (Ende-zu-Ende). Ghosterbe™ nutzt ausschließlich DSGVO-konforme Serverstandorte in der EU.</p>
+
+      <p><strong>6. Gibt es Zusatzfunktionen für sensible Informationen?</strong><br/>
+      Ja. Du kannst PIN-Schutz, doppelte Zustellung oder verzögerte Freigabe pro Datei aktivieren.</p>
     </div>
   </div>
 </div>
